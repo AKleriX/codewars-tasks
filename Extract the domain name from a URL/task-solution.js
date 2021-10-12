@@ -1,4 +1,4 @@
-function domainName(url){
+/* function domainName(url){
     let urlParse;
 
     if (url.indexOf('www.') !== -1)
@@ -11,4 +11,10 @@ function domainName(url){
     }
 
     return urlParse;
+} */
+
+// New, better solution
+
+function domainName(url){
+    return  url.replace('https://', '').replace('http://', '').replace('www.', '').split('.')[0];
 }
