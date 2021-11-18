@@ -1,0 +1,1 @@
+const matrixAddition = (a, b) => a.map((row, i) => row.map((num, j) => num + b[i][j]));
