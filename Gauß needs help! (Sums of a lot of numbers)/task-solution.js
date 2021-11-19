@@ -1,0 +1,1 @@
+const f = (n) => ((Number(n) === n) && !(n % 1) && (n > 0)) ? ((1 + n) * n) / 2 : false; 
