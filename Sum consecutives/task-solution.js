@@ -1,0 +1,2 @@
+const sumConsecutives = (s) => s.reduce((sumArr, num, i) => ((i < s.length-1) && (num === s[i+1])) ? [[num, sumArr[0][1]+s[i+1]],sumArr[1]] : [[s[i+1],s[i+1]],sumArr[1].concat(sumArr[0][1])],
+    [[s[0],s[0]],[]])[1];
