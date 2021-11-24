@@ -1,0 +1,1 @@
+const killKthBit = (n, k) => parseInt(n.toString(2).split('').map((num, i, arr) => i === (arr.length - k) ? 0 : num).join(''), 2);
