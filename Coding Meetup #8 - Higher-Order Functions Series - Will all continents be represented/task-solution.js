@@ -1,0 +1,1 @@
+const allContinents = (list) => new Set(list.map(dev => dev.continent)).size === 5;
