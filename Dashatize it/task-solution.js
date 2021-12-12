@@ -1,0 +1,1 @@
+const dashatize = (num) => num.toString().replace(/([13579])/g, '-$1-').replace(/--+/g, '-').replace(/(^-)|(-$)/g, '');
