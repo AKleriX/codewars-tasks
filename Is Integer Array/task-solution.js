@@ -1,0 +1,1 @@
+const isIntArray = (arr) => Array.isArray(arr) && (arr.length === 0 || arr.filter(el => parseInt(el) !== el).length === 0);
