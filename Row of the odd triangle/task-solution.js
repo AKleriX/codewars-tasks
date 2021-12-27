@@ -1,0 +1,1 @@
+const oddRow = (n) => Array(n).fill(0).map((_, i) => n*n-n+1+i*2);

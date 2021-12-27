@@ -1,0 +1,1 @@
+const XO = (str) => str.split('').reduce((count, s) => /x|o/i.test(s) ? (s.toLowerCase() === 'x' ? count + 1 : count - 1) : count, 0) === 0;
