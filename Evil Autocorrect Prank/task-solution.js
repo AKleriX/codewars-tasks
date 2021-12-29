@@ -1,0 +1,1 @@
+const autocorrect = (input) => input.replace(/\b(you+|u)\b/ig, 'your sister');
