@@ -1,0 +1,1 @@
+const omnibool = {n : 1, valueOf: () => this.n = !this.n};
