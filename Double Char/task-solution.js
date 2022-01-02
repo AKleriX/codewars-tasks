@@ -1,0 +1,1 @@
+const doubleChar = (str) => str.replace(/(.)/g, '$1$1');
