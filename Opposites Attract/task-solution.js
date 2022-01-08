@@ -1,0 +1,1 @@
+const lovefunc = (flower1, flower2) => Math.abs(flower1 - flower2) % 2 === 1;

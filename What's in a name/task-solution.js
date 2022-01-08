@@ -1,0 +1,1 @@
+const nameInStr = (str, name) => new RegExp(name.split('').join('.*'), 'i').test(str);
