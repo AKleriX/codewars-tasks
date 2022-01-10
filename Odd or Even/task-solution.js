@@ -1,0 +1,1 @@
+const oddOrEven = (array) => array.reduce((sum, n) => sum + n, 0) % 2 ? 'odd' : 'even';
