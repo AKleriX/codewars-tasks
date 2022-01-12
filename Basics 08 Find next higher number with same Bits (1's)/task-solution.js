@@ -1,0 +1,1 @@
+const nextHigher = (n) => parseInt(n.toString(2).replace(/0?1(1*)(0*)$/, '10$2$1'), 2);

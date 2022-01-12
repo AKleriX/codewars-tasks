@@ -1,0 +1,2 @@
+const firstNSmallest = (array, n) => [...array].map((num, i) => [num, i]).sort((a, b) => a[0] === b[0] ? a[1] - b[1] : a[0] - b[0])
+                                               .slice(0, n).sort((a, b) => a[1] - b[1]).map(n => n[0]);
