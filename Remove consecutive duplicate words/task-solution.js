@@ -1,0 +1,1 @@
+const removeConsecutiveDuplicates = s => s.split(' ').filter((word, i, str) => word !== str[i + 1]).join(' ');

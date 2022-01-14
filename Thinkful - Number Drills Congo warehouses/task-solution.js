@@ -1,0 +1,1 @@
+const boxCapacity = (length, width, height) => parseInt(length * 12 / 16) * parseInt(width * 12 / 16) * parseInt(height * 12 / 16);
