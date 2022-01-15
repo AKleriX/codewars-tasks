@@ -1,0 +1,1 @@
+const solution = (...args) => args.length !== new Set(args).size;
