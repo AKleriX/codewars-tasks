@@ -1,0 +1,1 @@
+const product = (s) => s.replace(/[^!]/g, '').length * s.replace(/[^?]/g, '').length;

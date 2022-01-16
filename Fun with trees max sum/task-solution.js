@@ -1,0 +1,1 @@
+const maxSum = (root) => root ? root.value + Math.max(maxSum(root.left), maxSum(root.right)) : 0;
