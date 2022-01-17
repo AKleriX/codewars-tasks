@@ -1,0 +1,1 @@
+const isAValidMessage = (message) => !message.replace(/(\d+)([a-z]+)/gi, (match, p1, p2) => Number(p1) === p2.length ? '' : match).length;
