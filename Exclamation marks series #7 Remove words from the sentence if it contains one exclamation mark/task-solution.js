@@ -1,0 +1,1 @@
+const remove = (string) => string.split(' ').filter(word => word.length - 1 !== word.replace(/!/g, '').length).join(' ');
