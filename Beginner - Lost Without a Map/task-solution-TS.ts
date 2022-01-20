@@ -1,0 +1,1 @@
+export const maps = (x: number[]): number[] => x.map((n: number) => n * 2);
