@@ -1,0 +1,1 @@
+export const maxMultiple = (divisor: number, bound: number): number => bound - bound % divisor;
