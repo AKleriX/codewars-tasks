@@ -1,0 +1,1 @@
+const sumDigits = (number) => [...Math.abs(number).toString()].reduce((sum, d) => +d + sum, 0);

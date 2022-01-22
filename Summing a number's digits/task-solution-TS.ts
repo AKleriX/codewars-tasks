@@ -1,0 +1,1 @@
+export const sumDigits = (n: number): number => [...Math.abs(n).toString()].reduce((sum: number, d: string): number => +d + sum, 0);

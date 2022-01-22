@@ -1,0 +1,1 @@
+export const smallEnough = (a: number[], limit: number): boolean => a.every((num: number): boolean => num <= limit);
