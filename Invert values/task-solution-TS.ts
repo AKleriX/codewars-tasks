@@ -1,0 +1,1 @@
+export const invert = (array: number[]): number[] => array.map(n => -1 * n);
