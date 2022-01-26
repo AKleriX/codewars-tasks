@@ -1,0 +1,1 @@
+const compose = (...func) => (param) => func.reduceRight((arg , f) => f(arg), param);
