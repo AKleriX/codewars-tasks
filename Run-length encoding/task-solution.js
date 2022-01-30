@@ -1,0 +1,1 @@
+const runLengthEncoding = (str) => str ? str.match(/(.)\1*/g).map(letters => [letters.length, letters[0]]) : [];
