@@ -1,0 +1,1 @@
+const alphanumeric = (string) => string ? !/[^a-z0-9]/i.test(string) : false;
