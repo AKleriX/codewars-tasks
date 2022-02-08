@@ -1,0 +1,1 @@
+const toUnderscore = (string) => string.toString().replace(/(.)([A-Z])/g, '$1_$2').toLowerCase();
