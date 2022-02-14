@@ -1,0 +1,1 @@
+export const arr = (n: number = 0): number[] => Array.from({length: n}, (_, i) => i);
