@@ -1,0 +1,1 @@
+const splitOddAndEven = (n) => n.toString().match(/[13579]+|[2468]+/g).map(Number);
