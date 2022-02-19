@@ -1,0 +1,1 @@
+const redarr = (arr) => Object.assign({}, [...new Set(arr)].sort());
