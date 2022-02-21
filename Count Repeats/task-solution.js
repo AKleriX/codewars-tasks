@@ -1,0 +1,1 @@
+const countRepeats = (str)  => str.length - str.replace(/(.)\1+/g, '$1').length;
