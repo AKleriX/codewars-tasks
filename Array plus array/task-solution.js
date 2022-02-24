@@ -1,0 +1,1 @@
+const arrayPlusArray = (arr1, arr2) => arr1.reduce((sum, n) => sum + n) + arr2.reduce((sum, n) => sum + n);

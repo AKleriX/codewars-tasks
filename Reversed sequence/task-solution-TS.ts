@@ -1,0 +1,1 @@
+export const reverseSeq = (n: number): number[] => Array.from({length: n}, (_, i) => n - i);

@@ -1,0 +1,1 @@
+const fakeBin = (x) =>  x.replace(/(\d)/g, (match) => Number(match) < 5 ? '0' : '1');

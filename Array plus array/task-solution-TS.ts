@@ -1,0 +1,1 @@
+export const arrayPlusArray = (arr1 : number[], arr2 : number[]) : number => arr1.reduce((sum: number, n: number): number => sum + n) + arr2.reduce((sum: number, n: number): number => sum + n); 
