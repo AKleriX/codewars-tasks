@@ -1,0 +1,1 @@
+export const betterThanAverage = (classPoints: number[], yourPoints: number) => classPoints.reduce((sum, n) => sum + n) / classPoints.length < yourPoints;

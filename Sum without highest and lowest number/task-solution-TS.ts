@@ -1,0 +1,1 @@
+export const sumArray = (array:number[] | null) : number => array && array.length > 2 ? [...array].sort((a, b) => a - b).slice(1, -1).reduce((sum, n) => sum + n) : 0;
