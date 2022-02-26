@@ -1,0 +1,1 @@
+const remove = (s) => s.split(' ').map(w => w.replace(/!+$/, '')).join(' ');
