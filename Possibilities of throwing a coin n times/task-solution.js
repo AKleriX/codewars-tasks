@@ -1,0 +1,1 @@
+const coin = (n, str = '') => n ? [...coin(n - 1, str + 'H'), ...coin(n - 1, str + 'T')] : [str];
