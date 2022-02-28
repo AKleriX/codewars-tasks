@@ -1,0 +1,1 @@
+const solve = (arr) => arr.map(nums => new Set(nums).size).reduce((mul, count) => mul * count);
