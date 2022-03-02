@@ -1,0 +1,1 @@
+const oddity = (n) => Math.trunc(Math.sqrt(n))**2 === n ? 'odd' : 'even';
