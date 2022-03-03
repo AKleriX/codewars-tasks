@@ -1,0 +1,1 @@
+const proofread = (str) => str.toLowerCase().replace(/ie/g, 'ei').split('. ').map(s => s[0].toUpperCase() + s.slice(1)).join('. ');  
