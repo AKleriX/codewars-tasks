@@ -1,0 +1,1 @@
+const sumMix = (x) => x.length ? Number(x.reduce((sum, n) => +sum + +n)) : 0;
