@@ -1,0 +1,1 @@
+export const twiceAsOld = (dadYearsOld: number, sonYearsOld: number): number => Math.abs(2 * sonYearsOld - dadYearsOld);
