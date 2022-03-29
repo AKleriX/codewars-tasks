@@ -4,9 +4,14 @@ function shortestArrang(n) {
     max = n / 2,
     sum = min + max + 1;
   while (n !== sum) {
-    if (sum > n) sum -= max--;
-    else sum += min--;
+    if (sum > n) {
+      sum -= max;
+      max--;
+    } else {
+      sum += min;
+      min--;
+    }
     if (min < 0) return [-1];
   }
-  return Array.from(Array(max - min)).map((_, i) => max - i);
+  return Array.from({ length: max - min }, (_, i) => max - i);
 }
