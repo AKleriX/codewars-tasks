@@ -1,0 +1,1 @@
+sd=x=>+(x+'').replace(/\d/g,d=>d*d);
