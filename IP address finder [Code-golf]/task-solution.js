@@ -1,0 +1,1 @@
+f=i=>[1,2,3,4].map(c=>[...i].reduce((s,l)=>s+l.charCodeAt(),0)*c%256);
