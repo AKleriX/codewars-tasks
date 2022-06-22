@@ -1,0 +1,15 @@
+Problem
+b boys and g girls went to the cinema and bought tickets for consecutive seats in the same row. Write a function that will tell you how to sit down for boys and girls, so that at least one girl sits next to each boy, and at least one boy sits next to each girl.
+
+The format of the input data
+The input contains two numbers: b and g (both numbers are natural).
+
+Output format
+The function should return any string that contains exactly b characters 'B' (denoting boys) and g characters 'G' (denoting girls), satisfying the condition of the problem. You do not need to print spaces between characters. If it is not possible to seat boys and girls according to the task conditions, the function should return null, None, etc. depending on programming language.
+
+Examples
+cinema(1,1) === "BG" (the result like "GB" is also valid)
+cinema(5,5) === "BGBGBGBGBG" (the result like "GBGBGBGBGB" is also valid)
+cinema(5,3) === "BGBGBBGB" (the results like "BGBBGBBG" or "BGBBGBGB" and so on are also valid)
+cinema(3,3) === "BGBGBG" (the result like "GBGBGB" is also valid)
+cinema(100,3) === null
