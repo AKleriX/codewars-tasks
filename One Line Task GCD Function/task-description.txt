@@ -1,0 +1,1 @@
+Complete the GCD function in one line and less than 75 characters.
