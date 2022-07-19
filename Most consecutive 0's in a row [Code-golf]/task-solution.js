@@ -1,0 +1,1 @@
+f=n=>Math.max(...(n+'').match(/0+/g).map(s=>s.length)) 
