@@ -1,0 +1,35 @@
+Description:
+Give you two number m(a positive integer with 5 digits) and n(a positive odd integer >= 3), make a n*n matrix pattern using the digits of m:
+
+Main diagonal and Vice diagonal fill in the first digit
+At this time the matrix is divided into four triangular areas
+
+The top area fill in the second digit
+The bottom area fill in the third digit
+The left area fill in the fourth digit
+The right area fill in the fifth digit
+like this:
+
+ When m = 12345 and n = 5, the matrix is:
+1 2 2 2 1
+4 1 2 1 5
+4 4 1 5 5
+4 1 3 1 5
+1 3 3 3 1
+Note: The result is a multiline string; Each row separated by "\n"; Each digit separated by a space; All inputs are valid.
+
+Some examples:
+makeMatrix(67890,3) should return:
+6 7 6
+9 6 0
+6 8 6
+
+
+makeMatrix(13579,7) should return:
+1 3 3 3 3 3 1
+7 1 3 3 3 1 9
+7 7 1 3 1 9 9
+7 7 7 1 9 9 9
+7 7 1 5 1 9 9
+7 1 5 5 5 1 9
+1 5 5 5 5 5 1
