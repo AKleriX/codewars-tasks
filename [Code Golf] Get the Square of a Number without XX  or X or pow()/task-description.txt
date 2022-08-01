@@ -1,0 +1,15 @@
+Task
+Write a function that gets a square of a number without the following:
+
+Your code mustn't contain any *s and you cannot use the pow function. Edit: You also cannot use __mul__ / imul function
+You cannot import any external libraries (unless you are satisfied with random being pre-imported).
+Only one function can be defined.
+Loophole solutions will not be accepted (see below).
+If I use test.expect in my restriction tests, that is okay. This is not an issue.
+Input will always be positive or 0
+The code has a length limit:
+Your code must be under or equal to 25 characters (and you already have to use 6 for the function name).
+
+Example of a loophole solution:
+
+square=lambda n:eval(')2,n(wop'[::-1])
