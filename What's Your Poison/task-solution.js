@@ -1,0 +1,1 @@
+const find = rats => rats.reduce((s, n) => s + 2 ** n, 0);
