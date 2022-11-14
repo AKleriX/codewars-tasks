@@ -1,0 +1,1 @@
+const  isNice = arr => arr.length ? arr.every(n => arr.includes(n - 1) || arr.includes(n + 1)) : false;
