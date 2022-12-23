@@ -1,5 +1,5 @@
 const rakeGarden = (garden) =>
   garden
     .split(' ')
-    .map((el) => (el === 'grabel' || el === 'rock' ? el : 'gravel'))
+    .map((el) => (el === 'gravel' || el === 'rock' ? el : 'gravel'))
     .join(' ');
