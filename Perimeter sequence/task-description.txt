@@ -1,0 +1,10 @@
+Perimeter sequence
+The first three stages of a sequence are shown.
+
+      0
+  0   00
+0 00  000
+
+The blocksize is a by a and a ≥ 1.
+
+What is the perimeter of the nth shape in the sequence (n ≥ 1) ?
