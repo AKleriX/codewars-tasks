@@ -1,0 +1,1 @@
+Dog.prototype.bark = () => 'Woof!';
