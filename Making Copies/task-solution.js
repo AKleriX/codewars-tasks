@@ -1,0 +1,1 @@
+const copyList = (l) => [...l];
