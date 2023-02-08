@@ -1,0 +1,8 @@
+Cubes in the box
+Your job is to write a function f(x,y,z) to count how many cubes of any size can fit inside a x*y*z box. For example, a 2*2*3 box has 12 1*1*1 cubes, 2 2*2*2 cubes, so a total of 14 cubes in the end.
+
+Notes:
+x,y,z are strictly positive and will not be too big.
+fun fact (unrelated...): there are 11 unique cube nets
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/The_11_cubic_nets.svg/1920px-The_11_cubic_nets.svg.png
