@@ -6,3 +6,4 @@ function connotation(str) {
     else counter--;
   return counter >= 0;
 }
+
