@@ -1,0 +1,1 @@
+const onePunch = items => typeof items === 'string' && items.length ? items.split(' ').sort().join(' ').replace(/[ae]/gi, '') : 'Broken!'; //Don't leave this line!!
