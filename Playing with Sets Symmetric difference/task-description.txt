@@ -1,0 +1,28 @@
+
+Set ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set ) objects are new JavaScript built-in objects defined since ECMAScript 2015 ( http://www.ecma-international.org/ecma-262/6.0/#sec-set-objects. )
+
+A Set lets you store unique values of any type. It comes with some useful methods like .add, .clear, .has . . . BUT some "Set operations" are missing, like . . .
+
+Symmetric difference
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Venn0110.svg/330px-Venn0110.svg.png
+
+The symmetric difference is an extension of the complement ( https://www.codewars.com/kata/playing-with-sets-complement ). Denoted A Δ B, it's the set of all element of A which are not element of B and all element of B which are not element of A.
+
+Example:
+{7,8,9,10} Δ {9,10,11,12} = {7,8,11,12}.
+
+Task
+Create function symDiff getting 2 sets as arguments and returning a new Set as result of symmetric difference of these sets.
+
+Examples:
+A = new Set([1,2,3]);
+B = new Set([2,3,4]);
+
+symDiff(A,B) // -> {1,4}
+
+Note: as I've got some problem outputting "Δ" in tests, I will use "^" instead of it.
+
+ 
+
+" May the Code be with you ! "
