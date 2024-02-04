@@ -1,0 +1,4 @@
+
+Given value of sine,implement function which will return sine,cosine,tangent,and cotangent in list. order must be same as in the description and every number must be rounded to 2 decimal places.If tangent or cotangent can not be calculated just don't contain them in result list.
+
+Trygonometry - https://en.wikipedia.org/wiki/Trigonometry
