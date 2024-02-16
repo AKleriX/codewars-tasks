@@ -1,0 +1,1 @@
+array=_=>Array.from({length:24},(_,i)=>new Intl.DateTimeFormat("en-US",{month:'long'}).format(new Date(2022,i%12,1)))
