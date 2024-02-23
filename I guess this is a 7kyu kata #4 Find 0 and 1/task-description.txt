@@ -1,0 +1,41 @@
+Description
+Give You an 2D array that only contains 0 and 1, please find out how many 1 are surrounded by 0 or 0 surrounded by 1. "Surrounded" means that its four directions(up down left right) all are diffrent numbers.
+
+Example:
+
+[
+[0,1,1,0,1,1,0,1,0],
+[1,0,1,0,1,1,0,1,0],
+[0,1,1,0,0,1,0,1,0],
+[0,0,1,0,1,0,1,1,0],
+[0,0,1,0,0,1,0,1,0],
+[0,0,1,0,1,0,0,1,0],
+[0,0,1,0,0,1,0,1,0]
+]
+
+There are three 1 surrounded by 0(the x in the array): 
+[
+[0,1,1,0,1,1,0,1,0],
+[1,0,1,0,1,1,0,1,0],
+[0,1,1,0,0,1,0,1,0],
+[0,0,1,0,x,0,1,1,0],
+[0,0,1,0,0,x,0,1,0],
+[0,0,1,0,x,0,0,1,0],
+[0,0,1,0,0,1,0,1,0]
+]
+
+There are two 0 surrounded by 1(the x in the array): 
+[
+[0,1,1,0,1,1,0,1,0],
+[1,x,1,0,1,1,0,1,0],
+[0,1,1,0,0,1,0,1,0],
+[0,0,1,0,1,x,1,1,0],
+[0,0,1,0,0,1,0,1,0],
+[0,0,1,0,1,0,0,1,0],
+[0,0,1,0,0,1,0,1,0]
+]
+
+So we need return a number 5 (three 1 + two 0)
+
+Task
+Complete function find01 that accepts a argument arr, return a number that is the count of 1 surrounded by 0 or 0 surrounded by 1.
