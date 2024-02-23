@@ -1,0 +1,1 @@
+array=_=>'sun mon tues wednes thurs fri satur'.split` `.map(d=>d+'day')
