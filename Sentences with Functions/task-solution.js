@@ -1,0 +1,10 @@
+const Adam = (s = '.') => 'Adam' + (s === '.' ? '' : ' ') + s;
+const has = (s = '.') => 'has' + (s === '.' ? '' : ' ') + s;
+const a = (s = '.') => 'a' + (s === '.' ? '' : ' ') + s;
+const dog = (s = '.') => 'dog' + (s === '.' ? '' : ' ') + s;
+const The = (s = '.') => 'The' + (s === '.' ? '' : ' ') + s;
+const name = (s = '.') => 'name' + (s === '.' ? '' : ' ') + s;
+const of = (s = '.') => 'of' + (s === '.' ? '' : ' ') + s;
+const the = (s = '.') => 'the' + (s === '.' ? '' : ' ') + s;
+const is = (s = '.') => 'is' + (s === '.' ? '' : ' ') + s;
+const also = (s = '.') => 'also' + (s === '.' ? '' : ' ') + s;

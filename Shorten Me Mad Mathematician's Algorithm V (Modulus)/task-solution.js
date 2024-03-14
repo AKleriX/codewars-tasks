@@ -1,0 +1,1 @@
+madMod=f=(a,b)=>!b?NaN:a-(a/b|0)*b

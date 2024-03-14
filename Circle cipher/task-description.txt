@@ -1,0 +1,15 @@
+Imagine a circle. To encode the word codewars, we could split the circle into 8 parts (as codewars has 8 letters):
+
+https://www.codewars.com/kata/634d0723075de3f97a9eb604
+
+If we read the result from left to right, we get csordaew.
+
+Decoding is the same process in reverse. If we decode csordaew, we get codewars.
+
+Examples:
+
+encode "codewars" -> "csordaew"
+decode "csordaew" -> "codewars"
+
+encode "white" -> "wehti"
+decode "wehti" -> "white"

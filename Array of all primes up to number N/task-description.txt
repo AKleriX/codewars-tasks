@@ -1,0 +1,5 @@
+Code a function which will return an array with all prime numbers smaller than or equal to an arbitrary parameter "n".
+
+Assume that all parameters will be numbers.
+
+Remember that in some test cases with a big enough "n", performance might be (more) important.

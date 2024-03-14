@@ -1,0 +1,11 @@
+
+Declare an variable which name is stone that cant't be modified.
+
+The initial value of stone is under below.
+
+{
+  feature: 'earth',
+  style: {
+    color: 'black'
+  }
+}

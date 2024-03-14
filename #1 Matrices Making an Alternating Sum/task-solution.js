@@ -1,0 +1,1 @@
+const scoreMatrix = matrix => matrix.reduce((s, r, i) => s + r.reduce((s, n, j) => s + (-1) ** (i + j) * n, 0), 0);
