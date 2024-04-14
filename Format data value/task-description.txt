@@ -1,0 +1,11 @@
+You get input data as a number (of megabytes). Your task is to convert it to the string adding 'MB' or 'GB' or 'TB' correctly.
+
+Find the details below:
+
+900 -> '900MB'
+1900 -> '1GB 900MB'
+568200 -> '568GB 200MB'
+1000000 -> '1TB'
+1234567 -> '1TB 234GB 567MB'
+
+P.S. 0 <= input number < 1000000000
