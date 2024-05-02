@@ -1,0 +1,8 @@
+The goal is to discover whether a person is related to another in direct line. For example, my grand-grand-...-grandfather is related to me in that way, but my brother is not. My brother and I only share common parents (at least one).
+
+The kata provides you with Person objects, that will have the two methods Person.getParents() and Person.getChildren(), each of them returning an array of Person objects. These arrays may be empty but will never be null. You may assume that there will be no loops in relationships.
+
+Task
+Your task is to extend the Person prototype with the method hasRelationsTo(person). Your function shall return true when the persons have a relationship in direct line (child-child...-child, or parent-...-parent). Parents are not related to eachother in that way. Siblings are not related to eachother in that way either.
+
+The preloaded Person prototype also has an addParent(person) method to prepare the tests (you would never need to call it). See example test cases.
