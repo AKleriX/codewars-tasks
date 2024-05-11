@@ -1,0 +1,24 @@
+The Challenge
+Given two musical note names between A0 and C8, return the interval separating them as a positive integer.
+
+Examples
+getInterval('F4', 'B4') should return 4.
+
+getInterval('G3', 'G4') should return 8.
+
+getInterval('A7', 'B6') should return 7.
+
+Some Background
+Musicians often refer to pitchs using a combination of note name and octave, using the standard piano keyboard as a reference.
+
+Note Names
+The seven note names are C, D, E, F, G, A and B. These names then repeat in the next octave all the way up the keyboard.
+
+Octave numbers
+The lowest note on the piano is A0. The octave number goes up at C, so the first three notes are A0, B0, and C1. The octaves are numbered all the way up to C8, which is the highest note on the piano.
+
+Intervals
+Intervals are named for the distance, first note inclusive, between the lower note and the higher note. This distance is measured not in semitones or whole tones, but rather in note names spanned.
+
+Examples
+So, for example, the distance between C4 and E4 is 3 because it includes C4, D4 and E4. The distance between A6 and E6 is 4 because it spans E6, F6, G6 and A6. Note that the distance between a note and itself is 1.
