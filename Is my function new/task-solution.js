@@ -1,0 +1,1 @@
+function wasCalledWithNew() { return new Boolean(new.target); }
