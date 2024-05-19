@@ -1,0 +1,22 @@
+Rules
+Please determine if the string s is "only you":
+
+The string should contains "you". Such as "only you","I love you","Nice to meet you";
+"you" can be discontinuous. Such as "y o u","y@o#u","yaobu";
+"you" should ignore case. Such as "You","YOU","YoU".
+The string should NOT contains "I","me","he","him","they","them","we". They MUST be continuous, but ignore the case.
+
+  If the string s conforms to the above condition, returns true; otherwise, returns false.
+
+Examples
+onlyYou("you") should return true
+onlyYou("YoU") should return true
+onlyYou("y o u") should return true
+onlyYou("yxoxu") should return true
+onlyYou("only you") should return true
+onlyYou("I love you") should return false
+onlyYou("I hate you") should return false
+onlyYou("Do you love me?") should return false
+onlyYou("we trust you") should return false
+onlyYou("you hit him") should return false
+onlyYou("I love youtube") should return false
