@@ -1,0 +1,14 @@
+Write a function that calculates your score for an expedition in the card game "Lost Cities". The score depends on the values of the expedition cards you've played (received as an array of integers), as well as the number of handshake cards played. The scoring rules are as follows:
+
+A penalty of -20 is applied right at the beginning if any kind of card will be played during the game. Then, the total value of the expedition cards is added and the final score is finally obtained by multiplying by a value depending on the number of handshake cards used, in the following manner:
+
+1 handshake card = score * 2
+2 handshake cards = score * 3
+3 handshake cards = score * 4
+
+Example:
+
+expedition cards: [2, 4, 6, 7, 8]
+2 handshake cards played
+
+=> Expected score: 21
