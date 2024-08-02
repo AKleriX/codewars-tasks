@@ -1,0 +1,1 @@
+sentenceCompression=s=>s.replace(/[\W\d]/g,'')
