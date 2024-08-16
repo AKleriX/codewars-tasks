@@ -1,0 +1,44 @@
+Task
+Create function that accept two numeric array arr1 and arr2. Pick out the unique elements of the two array (unique meaning is that the elements in an array does not appear in the other array), and then make a square as large as possible. For example, if there are 17 such elements of two arrays, sorted them in ascending order, and then make a 4x4 matrix (an 2D array). The remaining elements will abandon. If no unique element found, return [].
+
+Examples
+-- example 1
+input:
+arr1 = [0,1,2,3,4,5]
+arr2 = [5,6,7,8,9]
+  
+output:
+[
+  [0,1,2],
+  [3,4,6],
+  [7,8,9]
+]
+  
+-- example 2
+input:
+arr1 = [1,2,3,4,5]
+arr2 = [5,6,7,8,9]
+  
+output:
+[
+  [1,2],
+  [3,4]
+]
+
+-- example 3
+input:
+arr1 = [1,2,3,4,5]
+arr2 = [2,3,4,5,6]
+
+output:
+[
+  [1]
+]
+
+-- example 4
+input:
+arr1 = [1,2,3,4,5]
+arr2 = [1,2,3,4,5]
+  
+output:
+[]
