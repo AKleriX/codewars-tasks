@@ -1,0 +1,50 @@
+It is your first time at the Edinburgh Fringe Festival, and you are looking to see somes shows! The problem is that there are so many shows that choosing which ones to see can be stressful.
+
+Instead, you have decided to make a function to help you to see as many consecutive shows as possible each evening, thus eliminating the pesky problem of making actual decisions.
+
+As input, you will receive an array of objects representing different shows in the following format:
+
+{
+  name: "Little Death Club",
+  time: 8,
+  length: 1,
+  price: 15,
+}
+
+The goal is to create a function that returns which shows you will be able to see consecutively that night, as well as the total cost. There are a few rules:
+
+You will always go to the earliest show in the list, and then always go to the next available show
+If multiple shows are at the same time, choose the show with the cheapest price regardless of the length (because seeing so many shows gets expensive!)
+If there happens to be multiple shows at the same time with the same price, choose the first show in the order of the list
+Time is represented in integers, and all shows begin between 5pm (5) and 11:30pm (11.5)
+At least 30min (0.5) is needed between each show (in order to make it to the next venue!) This means that if you see a 1 hour long show at 6pm (6), the next possible show that you could see would be at 7:30 (7.5) or later.
+The function should return an array that includes the array of shows (names) that you will be going to, as well as the total price as an integer
+i.e. [['Little Death Club', 'show2', 'show3'], 30]
+If the supplied input is empty ( [ ] ), return [ ["No shows to see!"], 0 ]
+
+For example: If the input is:
+
+let favouriteShows = [
+    {
+      name: "Little Death Club",
+      time: 8,
+      length: 2,
+      price: 10,
+    },
+    {
+      name: "Courtney Act",
+      time: 6,
+      length: 1,
+      price: 10,
+    },
+    {
+      name: "Reversible",
+      time: 7,
+      length: 1,
+      price: 12,
+    }
+  ]
+
+The function should return:
+
+[['Courtney Act', 'Little Death Club'], 20]
