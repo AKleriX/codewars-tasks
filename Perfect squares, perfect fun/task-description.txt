@@ -1,19 +1,23 @@
+You are given a string "strng"
 
-Given an integer, if the length of it's digits is a perfect square, return a square block of sqroot(length) * sqroot(length). If not, simply return "Not a perfect square!".
+Perform the following operation until "strng" becomes empty:
 
-Examples:
+For every alphabet character from 'a' to 'z', remove the first occurrence of that character in "strng" (if it exists).
 
-1212 returns:
+Example, let initially strng = "aabcbbca". We do the following operations:
 
-12
-12 
+Remove the underlined characters strng = "(a)a(b)(c)bbca". The resulting string is strng = "abbca".
 
-Note: 4 digits so 2 squared (2x2 perfect square). 2 digits on each line.
+Remove the underlined characters strng = "(a)(b)b(c)a". The resulting string is strng = "ba".
 
-123123123 returns:
+Remove the underlined characters strng = "(b)(a)". The resulting string is strng = "".
 
-123
-123
-123
+Return the value of the string strng right before applying the last operation. In the example above, answer is "ba".
 
-Note: 9 digits so 3 squared (3x3 perfect square). 3 digits on each line.
+You can assume on next:
+
+strng will never be empty
+
+strng.length <= 5 * 10**5
+
+strng will contains only of lowercase English letters.
