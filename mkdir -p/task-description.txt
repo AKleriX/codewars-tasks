@@ -1,0 +1,20 @@
+Write a synchronous function that makes a directory and recursively makes all of its parent directories as necessary.
+
+A directory is specified via a sequence of arguments which specify the path. For example:
+
+mkdirp('/','tmp','made','some','dir')
+
+...will make the directory /tmp/made/some/dir.
+
+Like the shell command mkdir -p, the function you program should be idempotent if the directory already exists.
+
+HINT:
+
+In javascript/coffescript, you will want to require('fs') and use functions in that library.
+
+Documentation on fs. ( http://nodejs.org/api/fs.html )
+
+In python, you will want to use the os module and os.path
+
+Documentation on os module ( https://docs.python.org/2/library/os.html )
+Documentation on os.path module ( https://docs.python.org/2/library/os.path.html )
