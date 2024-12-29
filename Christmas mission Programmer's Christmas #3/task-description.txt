@@ -1,0 +1,24 @@
+Description:
+Christmas is coming soon. As a programmer, you need to complete a series of tasks to welcome the arrival of Christmas. This time your task is:
+
+Given a string s. You need to count how many pairs of two words "Merry" and "Christmas" appear in s, return the maximum possible numbers of pair(not the numbers of single word). For example:
+
+
+merryChristmas("MerryChristmas") === 1  //1 pair
+
+merryChristmas("ChristmasMerry") === 1  //1 pair
+                
+merryChristmas("yrreMsamtsirhC") === 1  //1 pair
+
+merryChristmas("MerryMerry") === 0  //no pair
+merryChristmas("ChristmasChristmas") === 0  //no pair
+
+merryChristmas("MMeerrrryyCChhrriissttmmaass") === 2  //2 pair
+
+merryChristmas("MMmmeerrrrrryyCChhiissssttaa") === 2  //2 pair
+
+merryChristmas("MMmmeerrrryyCChhiissssssttaa") === 1  //1 pair
+
+Note:
+Letters should be case sensitive. "M" and "m" are different ;-)
+You don't need to consider the order, the characters are disorganized.
