@@ -1,0 +1,9 @@
+You are given a string of numbers, letters and spaces.
+
+Implement the function dataTypes which should return an array of the following three JavaScript data types: Strings, Numbers, Booleans. Each set of charactes which does not contain numbers or spaces should be considered as one string. An exception are the values of True and False which should be evaluated to 'boolean.' See below for some examples.
+
+Examples:
+
+"You are number 1" // [string, string, string, number]
+"123gjet" // [number, string]
+"truestring1" // [boolean, string, number]
