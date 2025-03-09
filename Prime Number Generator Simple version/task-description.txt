@@ -1,0 +1,11 @@
+Using ES2015 Generators ( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator )
+Write a prime number generator.
+
+
+It should return each prime number in order.
+It should start with 2 as the first prime number.
+Without timing out it should return up the 10,003rd prime.
+
+
+For a more challenging version of this Kata see
+Prime Number Generator:Intermeddiate (with inputs) version (http://www.codewars.com/kata/55bb6493a0bf37798800004a/train/javascript)
