@@ -1,0 +1,13 @@
+Write a Regex that would test for a valid Swedish personal number (ID).
+
+In Sweden this number is formatted multiple ways (I have no idea why) so you would have to check all these possibilities. Your task is to validate for any of these formats:
+
+YYYYMMDD-XXXX
+
+YYYYMMDD+XXXX
+
+YYYYMMDDXXXX
+
+The first set of digits ('YYYYMMDD') refers to the birth date and the four 'X's at the end are random numbers.
+
+RegExp should test just for people born between year 1900 and 2016. Also consider all months to have at most 31 days (no need to validate February or other months with less).
