@@ -1,0 +1,12 @@
+You are provided with a skeleton of the class Fraction, which accepts two arguments (numerator, denominator).
+
+Your task is to make this class string representable, and addable while keeping the result in the minimum representation possible.
+
+Note: your class should not subclass fractions.Fraction
+
+Example
+fraction1 = Fraction(4, 5)
+print(fraction1 + Fraction(1, 8))
+# outputs: 37/40
+
+Enjoy!
