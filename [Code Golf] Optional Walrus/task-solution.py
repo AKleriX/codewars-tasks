@@ -1,0 +1,1 @@
+f=lambda i,n:len(i)*(len(i)>n)
