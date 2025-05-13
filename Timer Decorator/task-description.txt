@@ -1,0 +1,20 @@
+Write a timer() decorator that validates if a function it decorates is executed within (less than) a given seconds interval and returns a boolean True or False accordingly.
+
+Example:
+
+from time import sleep
+
+@timer(1)
+def foo():
+    sleep(0.1)
+    
+@timer(1)
+def bar():
+    sleep(1.1)
+
+
+>>> foo()
+True
+
+>>> bar()
+False
