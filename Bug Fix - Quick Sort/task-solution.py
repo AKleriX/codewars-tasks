@@ -1,0 +1,1 @@
+def quicksort(a):return a if len(a)<2 else quicksort([x for x in a[1:] if x<=a[0]])+[a[0]]+quicksort([x for x in a[1:] if x>a[0]])
