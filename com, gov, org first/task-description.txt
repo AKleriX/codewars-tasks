@@ -1,0 +1,26 @@
+Write a code that orders collection of URIs based on it's domain, so that it will return at first URIs with TLDs (Top Level Domains, the part of URI after the last dot) "com", "gov" and "org" (in alphabetical order of their domains), and then all other URIs, ordered in alphabetical order of their TLDs. In addition to that:
+
+You can't change the content of URI;
+Other parts of URI don't affect sorting. (URIs "c.com", "b.com" and "a.com" can be placed in any order inside their group, so both "c.com", "b.com" and "a.com" and "a.com", "c.com" and "b.com" are correct, till they stand before *.org)
+e.g.
+
+"http://www.google.en/?x=jsdfkj"
+"http://www.google.de/?x=jsdfkj"
+"http://www.google.com/?x=jsdfkj"
+"http://www.google.com/?x=jsdfkj"
+"http://www.google.org/?x=jsdfkj"
+"http://www.google.gov/?x=jsdfkj"
+should be sorted into
+
+"http://www.google.com/?x=jsdfkj"
+"http://www.google.com/?x=jsdfkj"
+"http://www.google.gov/?x=jsdfkj"
+"http://www.google.org/?x=jsdfkj"
+"http://www.google.de/?x=jsdfkj"
+"http://www.google.en/?x=jsdfkj"
+
+In the actual tests you need to group consecutive addresses with the same domain and sort them before comparison, i.e., if your solution returns ["b.com", "a.com", "c.gov"], the tests will perform the following steps:
+
+Split the addresses into groups: [["b.com", "a.com"], ["c.gov"]]
+Sort each group: [["a.com", "b.com"], ["c.gov"]]
+Flatten them: ["a.com", "b.com", "c.gov"]
