@@ -1,0 +1,39 @@
+Task
+
+Create class "Package" that represents a package which has a length, width, height (cm) and weight (kg) parameter.
+
+Furthermore, the following should always give the current volume of the package:
+
+p = Package(0.2, 0.2, 0.2)
+p.volume  # computes 0.2 * 0.2 * 0.2 and returns it
+
+But lo and behold! The following constraints must be satisfied for all packages at all time:
+
+0 < length <= 350
+0 < width <= 300
+0 < height <= 150
+0 < weight <= 40
+
+For example, the following should raise a custom (written-by-you) DimensionsOutOfBoundError:
+
+p = Package(351, 0.2, 0.2, 0.2)
+
+# raises DimensionsOutOfBoundError with  message:
+#  "Package length==351 out of bounds, should be: 0 < length <= 350"
+
+Assignments with out-of-bounds values also produce the same error:
+
+p = Package(10, 0.2, 0.2, 0.2)
+
+p.length = 351
+
+# raises DimensionsOutOfBoundError with  message:
+#  "Package length==351 out of bounds, should be: 0 < length <= 350"
+
+Notes
+
+The error message given when "DimensionsOutOfBoundError" is raised should always follow the exact format:
+
+"Package {variable}=={value} out of bounds, should be: {lower} < {variable} <={upper}"
+
+where variable is length, width, height or weight; value is the out-of-bounds value and lower/upper are lower/upper bound on the variable, respectively.
