@@ -1,0 +1,33 @@
+I often send "bit letter" to my colleagues to talk about our boss or what do we have for dinner.
+
+A bit letter takes 1 char, just like ASCII, but there are some "parameters" in upper 3 bits to describe it.
+
+0           0       0       0  0  0  0  0
+[punctuation]   [capital]   [letter index]
+[punctuation]
+0 = null;
+1 = space (before letter);
+2 = comma (after letter);
+3 = dot (after letter)
+
+[capital]
+0 = lowercase;
+1 = uppercase;
+
+
+[letter index]
+The letter's index in alphabet, start with 0.
+
+==========================
+
+For example:
+
+  'a'  = 0B00000000 = 0   (a)
+  'A'  = 0B00100000 = ‭32‬  (A)
+  " a" = 0B01000000 = 64  (space + a)
+  "A," = 0B10100000 = ‭160‬ (A + comma)
+  "a." = 0B11000000 = ‭192‬ (a + dot)
+
+==========================
+
+Complete function bit_letter(n), for example, if n=[39,4,11,11,142,86,14,17,11,195], function will return 'Hello, world.'.
