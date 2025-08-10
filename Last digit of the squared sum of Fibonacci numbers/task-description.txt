@@ -1,0 +1,7 @@
+In this kata you will compute the last digit of the sum of squares of Fibonacci numbers.
+
+Consider the sum Sn=F0^2+F1^2+...+Fn^2, where F0=0, F1=1 and Fi=Fi−1+Fi−2 for i≥2, you must compute the last digit of Sn. 
+
+Example: Given input n=7, Sn=273. Therefore the output is 3. 
+
+Note that 0≤n≤10^18 . So bruteforce will not work.

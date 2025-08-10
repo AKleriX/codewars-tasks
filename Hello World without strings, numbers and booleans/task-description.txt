@@ -1,0 +1,1 @@
+Create the hi_all() function without using strings, numbers and booleans. The return value is "Hello World". No, it is not impossible, use the builtin functions. Good luck :)
