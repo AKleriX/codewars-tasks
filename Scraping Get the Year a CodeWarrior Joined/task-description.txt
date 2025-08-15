@@ -1,0 +1,18 @@
+Task:
+Write a function that accepts a username from someone at Codewars and returns a string containing the month and year (separated by a space) when they joined Codewars.
+
+Example:
+      Input            Output
+----------------     ----------
+"donaldsebleung" --> "Jan 2016"
+      "jhoffner" --> "Oct 2012"
+
+Libraries/Recommendations:
+
+Python:
+urllib.request.urlopen: Opens up a webpage.
+re: The RegEx library for Python.
+bs4(BeautifulSoup [ https://www.crummy.com/software/BeautifulSoup/bs4/doc ]): A tool for scraping HTML and XML.
+
+Notes:
+Time out / server errors often happen with the test cases depending on the status of the CodeWars website. Try submitting your code a few times or at different hours of the day if needed.
