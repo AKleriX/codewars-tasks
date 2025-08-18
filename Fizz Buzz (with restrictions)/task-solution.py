@@ -1,0 +1,1 @@
+fizz_buzz = lambda n: ('Fizz Buzz','Fizz','Buzz',f'{n}')[((n%3>0)<<1)|(n%5>0)]
