@@ -1,0 +1,19 @@
+Task:
+You get two sticks of lengths > 0
+You can break them into pieces of integer lengths
+Your task is to construct the biggest square from those sticks, which means that you need 4 pieces of the same length
+The longer the side of the square, the bigger the square
+
+Output:
+if square can be constructed --> length of the side of that square
+if square can't be constructed --> 0
+
+Examples:
+square(0.25, 3.75) -> 0
+3 pieces of length 1 -> no square
+
+square(2, 2) -> 1
+4 pieces of length 1 -> square, side_length = 1
+
+square(5, 14) -> 4
+4 pieces of length 4 -> square, side_length = 4
