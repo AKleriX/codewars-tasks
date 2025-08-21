@@ -1,0 +1,1 @@
+is_leap=lambda n: not(n%4 or (n%100==0 and n%400))
