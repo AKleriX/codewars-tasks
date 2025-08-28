@@ -1,0 +1,1 @@
+ALPHABET = str().join(sorted(set(c for c in str().join(dir(str)) if c.islower()).union(set(c for c in str().join(dir(dict)) if c.islower()))))
