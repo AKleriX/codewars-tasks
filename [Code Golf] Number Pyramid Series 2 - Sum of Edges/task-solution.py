@@ -1,0 +1,1 @@
+sum_edges=lambda n:n*(5*n*n-3*n+10)//6-(n>0)-(n>1)
