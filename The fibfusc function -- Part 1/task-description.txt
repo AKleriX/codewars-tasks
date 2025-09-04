@@ -1,0 +1,8 @@
+The fibfusc function is defined recursively as follows:
+
+fibfusc(0) = (1, 0)
+fibfusc(1) = (0, 1)
+fibfusc(2n) = ((x + y)(x - y), y(2x + 3y)), where (x, y) = fibfusc(n)
+fibfusc(2n + 1) = (-y(2x + 3y), (x + 2y)(x + 4y)), where (x, y) = fibfusc(n)
+
+Your job is to produce the code for the fibfusc function. In this kata, your function will be tested with small values of n, so you should not need to be concerned about stack overflow or timeouts.
