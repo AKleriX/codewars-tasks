@@ -1,0 +1,17 @@
+Task
+Convert the given number (provided as a string) from one number base to the other. The given number will always be non-negative, and valid in the given base. Return the result also as a string.
+
+input number is < 1025
+bases range from 2 to 62
+the digits used are: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+Examples
+[number]    [from]   [to]       [result]
+----------------------------------------
+"0"          any     any   -->   "0"
+"255"         10      16   -->   "ff"
+"101010"       2      10   -->   "42"
+"c0de"        16       2   -->   "1100000011011110"
+"CodeWars"    62      26   -->   "onah0naham"
+
+Your code can be maximum 170 bytes long.
