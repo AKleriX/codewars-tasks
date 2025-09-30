@@ -1,0 +1,38 @@
+
+Story:
+Your friend is celebrating their birthday and has received numerous gifts. They are, however, having difficulty picking which one to open first and which one to save until last. They want to open the gifts in order, beginning with the one they like the least and progressing to the one they enjoy the most. Your friend presents you with a list of items they would like to receive, sorted from least desired to most desired, to assist them in making this decision. They also received multiple gifts in the form of tuples, each from a different person. Each tuple contains of objects and the name of the provider.
+
+Task:
+Your objective is to write a function that takes a list of requested gifts and tuples of gifts and their providers and return a list of people who gave the gifts, ordered from least to most desired. In the case of a tie, the order should be determined by the input sequence.
+
+Example:
+
+Inputs:
+Desired gifts list: ("Lego Bricks", "Cat Food", "Intercontinental Ballistic Missile", "A Single Piece Of Paper") (Ranked from least liked to most liked)
+
+Gifts received:
+("Plastic Car", "Orange Watermelon", "John") (John's gift)
+
+("Cat Food", "Bob") (Bob's gift)
+
+Explanation:
+Lego Bricks have a value of 1 (2^0).
+Cat Food has a value of 2 (2^1).
+Intercontinental Ballistic Missile has a value of 4 (2^2).
+A Single Piece Of Paper has a value of 8 (2^3).
+John's gift has a value of 0, and Bob's gift has a value of 2 (because Cat Food has a value of 2). (Gift's value is the sum of all elements of that gift.)
+
+Output:
+["John", "Bob"]
+
+
+
+Additional info
+
+Different people can have the same name.
+Name can't be the same as a gift element
+Elements in gifts DON'T repeat
+Limits are low - Your solution can be slow.
+For beta: If you find any issues with this kata or have any suggestions, report them in the comments.
+Happy Coding.
+This Kata has been made on My Birthday!(05.11)
