@@ -1,0 +1,44 @@
+Setup
+Start with an empty square grid that hypothetically goes on forever.
+
+You will be given a list of points ((x, y) coordinates) where the initial stones are to be placed which all have a value of 1.
+
+For example input of [(0, 0), (1, 0)] is the initial setup corresponding to two stones side by side.
+
+While an input of [(0, 0), (2, -2)] can be represented as if you imagine the x axis to increase to the right and y axis to increase to the top, and (0, 0) being the top left 1:
+
+1 0 0
+0 0 0
+0 0 1
+
+Rules
+Your task is to place stones with increasing values starting from 2 (2, 3, 4, ...) with the rule, that a stone valued X can only be placed on an empty spot, where the sum of its eight neighbours equals to X.
+
+1 0 0
+0 X 0
+0 0 1
+
+In the above setup a stone with value 2 can be placed at position X.
+
+1 0 0
+0 0 Y
+0 0 1
+
+In the above setup a stone with value 2 can NOT be placed at position Y, because the sum of its neighbours is not 2 but only 1.
+
+After having placed the 2 you have to place 3 next and so on.
+
+There is a numberphile video explaining these rules: https://www.youtube.com/watch?v=m4Uth-EaTZ8
+
+Task
+Your task is given an initial setup of stones (all valued 1) to place stones with increasing values starting with 2 according to the above rules until you find the highest valued stone which cannot be placed on the board.
+
+Example
+Given the above setup of [(0, 0), (2, -2)] it is possible to places stones valued 2, 3, 4 up to 16. But it is not possible to place the next stone valued 17.
+
+  9  5 10 11  0  0
+  0  4  1  0  0  0
+ 12  8  3  2  0 16
+  0  0  0  6  1 15
+  0  0 13  7 14  0
+So the solution is 17.
