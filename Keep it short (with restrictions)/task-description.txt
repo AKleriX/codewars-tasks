@@ -1,0 +1,36 @@
+
+Task
+For a given non-empty list of sets l return a dictionary where
+
+keys are the unique elements across all sets
+the value is a number of sets in which the key appears.
+
+The sets are empty or contains only integers.
+
+Don't modify the input list and sets
+
+Example:
+# Input: [{1,2,3}, {2,3,4}]
+# Output: {4: 1, 2: 2, 3: 2, 1: 1}
+
+# Explanation:
+
+# There are 4 unique elements: 1, 2, 3, 4
+# Number 1 appears only in 1 set
+# Number 2 appears in 2 sets.
+...
+
+Restrictions
+Your code mustn't:
+
+be longer than 1 line and 140 characters.
+contain return (search is case insensitive)
+contain ; (i.e. make it a proper one-liner :))
+contain # (ergo no explanations :) Let people to enjoy deciphering your puzzling code)
+contain more than one = (Yes, one = is enough ;))
+
+Note
+This kata is about creativity not proper coding style. Your colleagues/boss won't like you if you make production code like this. :)
+
+Don't forget to rate the kata after you finish it. :)
+Happy coding!

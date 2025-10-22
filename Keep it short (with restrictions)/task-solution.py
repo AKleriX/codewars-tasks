@@ -1,0 +1,1 @@
+short=lambda l:{x:sum(x in s for s in l) for x in set().union(*l)}
