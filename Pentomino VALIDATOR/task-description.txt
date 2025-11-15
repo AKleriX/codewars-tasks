@@ -1,0 +1,59 @@
+A Pentomino is a polygon in the plane made of 5 equal-sized squares connected edge-to-edge. There are 12 different pentominoes types (regardless of symmetry and rotations). There is a naming convention in the pentomino community:A common problem is to try to place different types of pentominos on a grid. A 6x10 rectangular grid is a classic, as you may place all of the 12 types, with 2339 solutions without symetries and reflexions, 9356 in total.
+
+https://www.d2x-expertise.com/images/pentPiecs.gif
+
+While 1 or 2 kyu ranked codewars members are struggling with efficient algos to produce all possible solutions for a given puzzle without 12s time out, your job is to write a "pentomino validator function".
+
+The grid to be tested will be passed as a string:
+
+each "row" ends with "\n",except the last row
+each pentomino place is marked with its 'type', in capital letter.
+Your function should return true or false according to the validity of the solution.
+Here is a 6x10 valid solution:
+
+"IIIIIXZZPP\n"
+"LLFWXXXZPP\n"
+"LFFWWXVZZP\n"
+"LTFFWWVUUU\n"
+"LTNNVVVUYU\n"
+"TTTNNNYYYY"
+
+WAIT ! At this stage, you may have noted that to be valid, the grid must have 60 slots, meaning possible grids are 1x60, 3x20 ,5x12, 6x10, 10x6,...
+
+That would be far too easy...
+
+To make pentomino puzzles more complex, one invented the 'forbidden grid entry', noted '-'. Thus one may find solutions for an 8x8 grid with 4 '-', or some other famous problems, and you may expect such solutions to test...
+
+For a grid to be valid, it must not contain more than one pentomino of a given type. Here is an example of a valid solution for the "cross" pattern, using only 9 different types :
+
+"---UUU---\n"
+"---UWU---\n"
+"---ZWW---\n"
+"VZZZYWWPP\n"
+"VZYYYYFPP\n"
+"VVVLNFFFP\n"
+"---LNF---\n"
+"---LNN---\n"
+"---LLN---"
+
+But this one (having more than 1 time the 'V' pentomino) is invalid:
+
+"--VUUUV--\n"
+"--VUWUV--\n"
+"VVVZWWVVV\n"
+"VZZZYWWPP\n"
+"VZYYYYFPP\n"
+"VVVLNFFFP\n"
+"VVVLNFVVV\n"
+"--VLNNV--\n"
+"--VLLNV--"
+
+Hints:
+
+You should not expect ill-formed strings.
+Valid Pentomino types are capital letters only.
+When testing a type, be aware that each type can have different placements due to possible symmetries and rotation.
+As many newbies are trying to solve pentomino challenge, expect many weird submissions...
+You may expect performance issues... Many test cases will be submitted...
+
+Enjoy!
