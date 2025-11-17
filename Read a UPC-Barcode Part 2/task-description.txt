@@ -1,0 +1,53 @@
+https://upload.wikimedia.org/wikipedia/commons/d/d5/UPC-A.png
+
+Your task is to convert a string representing the lines/spaces in a 12 digit barcode/UPC-A into a string of numbers 0-9. This is part 2 of the "Read a UPC/Barcode" kata, and we'll be making things more difficult. I recommend reading/solving part 1 before continuing as it outlines the basic rules/information needed to read the UPC-A. The preloaded bit string dictionaries described in part 1 are available again as LEFT_HAND and RIGHT_HAND.
+
+Part 1 here ( https://www.codewars.com/kata/read-a-upc-slash-barcode ).
+Further reading/details wiki ( https://en.wikipedia.org/wiki/Universal_Product_Code )
+
+In this kata we'll be adding a working modulo check system, and accepting barcodes backwards and forwards. This is the barcode I'll be using for examples, and an example of what you'll receive as input:
+
+'▍ ▍   ▍▍ ▍ ▍▍   ▍  ▍▍  ▍   ▍▍ ▍   ▍▍ ▍   ▍▍ ▍ ▍ ▍ ▍▍▍  ▍ ▍▍  ▍▍ ▍▍ ▍▍  ▍  ▍▍▍ ▍▍  ▍▍ ▍   ▍  ▍ ▍'
+
+A correct modulo check digit(the final number) must be 0-9 and is calculated as follows:
+
+Starting from the first digit, sum every odd indexed number.
+Multiply the sum by 3.
+Starting from the second digit, sum every even indexed number, do NOT multiply by 3.
+Sum the first and second sums.
+M = total sum % 10
+If M is 0, modulo digit = 0, otherwise, modulo digit = 10 - M
+
+Modulo check confirmation example:
+
+1. 0 51000 01251 7 (After conversion of the example barcode to digits, as done in part 1.)
+2. (0 + 1 + 0 + 0 + 2 + 1) * 3 = 12
+3. (5 + 0 + 0 + 1 + 5) = 11 (Ignore 7 as this is the digit being verified.)
+4. 12 + 11 = 23
+5. M = 23 % 10 = 3
+6. Because M != 0, 10 - M = 7, The modulo digit is confirmed to be 7 and is correct.
+
+In order to read backwards, we must understand parity in the LEFT_HAND and RIGHT_HAND dictionaries. Bit strings in LEFT_HAND have odd parity, meaning an odd number of 1s, bit strings in RIGHT_HAND have even parity, meaning an even number of 1s:
+
+'0011001' = 1 in LEFT_HAND, odd parity
+
+'1100110' = 1 in RIGHT_HAND, even parity
+
+If the first bit group after the guard pattern has even parity, then the scanner knows that the code is being read backwards(right to left):
+
+'(101)0001101,0110001,0011001,0001101,0001101,0001101(01010)1110010,1100110,1101100,1001110,1100110,1000100(101)'
+
+Here we have the example barcode, with each group converted to bit strings. The first group has odd parity, the code is being read forwards, so LEFT_HAND['0001101'] = 0, and that is our first digit.
+
+'(101)0010001,0110011,0111001,0011011,0110011,0100111(01010)1011000,1011000,1011000,1001100,1000110,1011000(101)'
+
+Here, we have the same code but in reverse. The first group has even parity, therefore we take '0010001', reverse it, and use that as our key to RIGHT_HAND. RIGHT_HAND['1000100'] = 7, our last digit.
+
+If the calculated modulo digit is different than what is displayed on the input barcode, return 'error'. Otherwise, return a string representing the input barcode in the format:
+
+'(number_system) (left_hand) (right_hand) (modulo_check)'
+
+You should handle cases where the code is given forwards or backwards. Being given the example barcode forwards or backwards, you should return this:
+
+'0 51000 01251 7'
+A bar in case you need to use it: ▍
