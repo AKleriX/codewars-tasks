@@ -1,0 +1,28 @@
+The simple task
+You have to calculate k-th digit of π, knowing that:
+
+π = 3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342...
+Make sure to check the anti-cheat rules at the bottom.
+
+Examples
+For k = 0:
+3.14159265358979323...
+^
+
+For k = 6:
+3.14159265358979323...
+       ^
+
+Constraints
+0 <= k < 10000
+
+Random test cases
+1000 tests where 0 <= k < 10000
+
+Anti-cheat
+
+The only import allowed in Python is math
+The code length is limited to 2000 characters.
+Words http, www, requests, gmpy2 and search are banned.
+Eval and exec are banned
+Only ASCII characters are allowed
