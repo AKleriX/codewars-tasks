@@ -1,0 +1,13 @@
+Oh no!
+
+The junior sensei responsible for backups has failed in his primary task!
+
+We have lost some key code, and none of it was backed up... We can't earn money to pay our bills until you fix this problem!
+
+Luckily - when it comes to development - we do things the right way in this dojo, we have lots of tests, so we will know when we have fixed things.
+
+In this kata, you must fill in the missing code, using only your whits and skill!
+
+You have been given the InvoicePrinter class, this collects the data that is passed onto another class for layout and eventual printing. But it seems we have lost the classes InvoiceRow and Invoice and some useful helper functions.
+
+You know what to do, get reverse engineering!
