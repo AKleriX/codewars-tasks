@@ -1,0 +1,45 @@
+Have you ever had to aggregate data from a report that you queried from an API?
+I needed to aggregate my data in code recently and thought it was an interesting exercise.
+
+This is the task:
+Create a Rudimentary Pivot Table function that takes in a two dimensional array and returns an aggregated two dimensional array based on the values of a certain column.
+
+pivot(two_dimensional_array, index_to_pivot)
+
+Input:
+A report showing shopping items and their related metrics
+report = [ ["Item 1", "Man", "2500", "500", "Yellow"],
+           ["Item 2", "Woman", "42", "8.4", "Blue"],
+           ["Item 3", "Woman", "56", "11.2", "Purple"],
+           ["Item 4", "Woman", "11", "2.2", "Yellow"],
+           ["Item 5", "Man", "3600", "720", "Red"],
+           ["Item 6", "Woman", "32", "6.4", "Red"],
+           ["Item 7", "Man", "6700", "1340", "Yellow"],
+           ["Item 8", "Woman", "25", "5", "Green"] 
+         ]
+         
+The function would aggregate the data based on the an index column (in the data above, index 1 would be the column that states whether the item is for a Man or Woman).
+
+To invoke the function:
+pivot(report, 1)
+
+The returned output would be also be a two dimensional array:
+
+[ ['-', 'Man', 12800.0, 2560.0, '-'],
+  ['-', 'Woman', 166.0, 33.2, '-'] 
+]
+
+Assumptions:
+You will never be given an empty array.
+You will never pivot on numerical columns.
+The index given is zero indexed (index 3 means column 4).
+
+Rules:
+The function should aggregate numbers for each numerical column based on the value in the pivot column.
+Numbers (floats or ints) will always be strings so they need to be parsed and returned as actual number values.
+Make sure no precision is lost when floats are involed (meaning: do not round anywhere. But don't use Decimal: if you use it, your code won't pass the performance tests).
+Any strings that aren't numbers and aren't in the index column should be overwritten with a "-".
+Your returned array should be in alphabetical order according to the values you pivoted on.
+Since database manipulations turn often in manipulations of big data, your code will have to be fast enough to handle some tests with arrays of 1 300 000 lines without timing out (several approaches are still possible in terms of time complexity, though be clever about what you choose to implement).
+
+Good luck!
