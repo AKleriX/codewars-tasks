@@ -1,0 +1,57 @@
+Task
+Inputs: (1) A string representing a piece of text to be spellchecked. (2) A list or array of single words. These words are (assumed to be) correctly spelled. Any word in the text that is not in the list is a misspelling.
+
+Output: A dictionary of all misspelled words, each with a list of possible corrections. The corrections for each misspelled word are the words in the list "nearest" to it, as defined in the "Details" section below.
+
+Example: If text = "The students were thriled to recive ther diplomas.", and
+word_list = ["to", "the", "were", "there", "their", "recite", "receive", "students", "thrilled", "diplomas"], 
+the spellchecker should return {"thriled": ["thrilled"], {"recive": ["receive", "recite"]}, {"ther": ["the", "their", "there"]}.
+
+Although people can tell from context that "recive" should be replaced by "receive" rather than "recite", this simple spellchecker cannot. All it knows is that "receive" and "recite" are the words nearest to "recive" in the word-list. Similarly, "the","their"and "there"are the nearest words to "ther".
+
+Details
+(1) Each word in the word-list is a non-empty string containing lower-case letters. Any character besides the first and last can also be an apostrophe or hyphen. (Apostrophes and hyphens occur in English words, like "don't, "able-bodied".)
+
+(2) Each word in the text is a non-empty string containing at least one letter. Any character besides the first and last can also be punctuation ("internal punctuation"). Internal punctuation that results in a misspelling should be corrected. There is at least 1 whitespace character between words.
+
+(3) The corrections for each misspelled word are the words in the list within edit distance 1 of it. If there are none, its corrections are at edit distance 2. If there are also no corrections at edit distance 2, the list of corrections is the empty list. See the "Edit Distance" section below for the precise definition of edit distance 1 and 2.
+
+(4) Each word in the word-list is lowercase, but corrections should take case into account. Characters in a misspelled word that are in the correct position preserve their case. Incorrect characters should be corrected to be lowercase, unless the misspelled word is entirely uppercase (i.e. all letters are uppercase - the case of internal punctuation is irrelevant) and of length > 1. For strings of length 1, keep the case of the first character, whether correct or not.
+
+Example: If text = "We CANOT belieVe 'Th$IS'. E woNT'!! and
+word_list = ["we", "can't", "this", "well", "won't", "cannot", "believe"],
+the checker should return {"CANOT": ["CAN'T", "CANNOT"], "Th$IS": ["This"], "E": ["We"], "woNT": ["woN't"]}.
+
+Explanation:
+
+"CANOT" is a misspelling of "can't" or "cannot". It's an uppercase string of length greater than 1, so the corrections should be entirely uppercase: "CAN'T", "CANNOT".
+"Th$IS" is a misspelling of "this". The first 2 letters are correct and preserve case. Both "$" and "I" are wrong, so should be corrected to the correct character in lowercase. The correction is "This".
+"E" is a misspelling of "we". It's an uppercase string, but since it's length 1, we keep the case of the first character, but we don't know that the rest of the string should be uppercase. So the correction is "We" rather than "WE" or "we".
+woNT'!! deserves close attention. The misspelled word ends at 'T', because "'!!" is "external" punctuation. The ' is NOT part of the misspelling. The first 3 characters are correct and preserve case. The 'T' is wrong and is corrected to '. The correction is "woN't".
+
+(5) Each list of corrections should be lexicographically sorted. This is why ["receive", "recite"] appears instead of ["recite", "receive"]in the first example.
+
+(6) No duplicate strings should appear in any list of corrections.
+
+Edit Distance
+In this kata, the words whose edit distance is 1 from a given word are those that result from doing one of the following operations: deleting a single character, inserting a single character, replacing a single character by a different character, or transposing a pair of adjacent characters. Edit distance 2 refers to doing two of those operations. In this kata edit distance calculations ignore case.
+
+Examples:
+
+The following are at edit distance 1 from "hello":
+"helo" (delete 'l')
+"Heello" (insert 'e')
+"helpo" (replace 'l' by 'p')
+"hlelO" (transpose 'l' and 'e')
+
+The following are at edit distance 2 from "hello":
+"helP" (delete 'l', then replace 'o' with 'p')
+"elhlo" (transpose 'h' and 'e', then transpose 'h' and 'l')
+"MELLOW" (replace 'h' with 'm', then insert 'w')
+"shelol" (insert 's', then transpose 'l' and 'o')
+
+This corresponds to Damerau–Levenshtein Distance. It is NOT the same definition as used in the Levenshtein Distance kata.
+
+Constraints: Number of words in the text ≤ 250. Number of words in the word-list ≤ 250.
+
+Enjoy correctign yore speling!
