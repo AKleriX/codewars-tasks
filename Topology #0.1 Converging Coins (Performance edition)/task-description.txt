@@ -1,0 +1,34 @@
+Task
+Let G be an undirected graph. Suppose we start with some coins on some arbitrarily chosen vertices of G, and we want to move the coins so that they finally end up on the very same vertex, using as few moves as possible. Knowing that each coin has to move across an edge at every step, your goal is to find and return the minimum number of moves required to do so or None if it's impossible.
+
+Input
+The function converge(g, coins) takes 2 parameters:
+
+g: the undirected graph as a dictionary of sets of neighbours, of size N. All vertices are integers.
+coins as a tuple of vertices of size C. Those are the starting vertices of the coins, which might not be distinct.
+
+Output
+Return the minimum number of steps possible to converge to any vertex, or None if no convergence is possible.
+
+Constraints
+Watch out for performance: the original kata expects a quadratic solution but here, nothing less performant than linear in number of vertices will pass the tests... (And don't forget about the dependencies in number of coins!)
+
+The reference solution running against the tests generally passes in 5-7s, and occasionnally up to 8,5s.
+
+Tests setup:
+
+Fixed tests:
+
+20 tests: N < 10 ; 1 < C < 8
+
+Random tests:
+
+200 small tests: 5 <= N <= 15 ; 2 <= C < 6
+200 medium tests: 700 <= N <= 800 ; 2 <= C <= 8
+20 max coins tests: 700 <= N <= 800 ; 180 <= C <= 200
+40 huge tests: 8000 <= N <= 8100 ; 2 <= C <= 8
+
+Notes:
+There is only one visible assertion per group of random test.
+The reference solution is run separately from your function (in a different it block), so you can compare easily the performances
+Don't mutate the input... You cannot use that to cheat anyway, but you'll run into trouble if you do so.
