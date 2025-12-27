@@ -1,0 +1,46 @@
+Squaredle solver
+Introduction
+Squaredle is a game in which players find words by connecting letters up, down, left, right and diagonally. Each square in the puzzle can be used only once.
+
+The purpose of this kata is to simulate a Squaredle player, finding all words in a puzzle.
+
+Task
+Write a function that returns a list of words, containing all words in a Squaredle puzzle.
+
+Words form a letter snake through the puzzle: each letter must be connected up, down, left, right or diagonally to its neighboring letters in the word. It is not allowed to move through missing squares.
+
+Pay attention to the performance of your function.
+
+Example
+ --- --- ---
+| c | d |   |         This puzzle contains 'code', 'cows', 'owed', 'wars' and 'codes'.
+ --- --- ---
+| o |   | e |         It doesn't contain 'does' (no moving through missing squares).
+ --- --- --- 
+|   | w | s |         So given 'cd -o e- ws-ar ', your function should return
+ --- --- ---
+| a | r |   |         ['code', 'cows', 'owed', 'wars', 'codes'].
+
+ --- --- ---
+Input
+A string representation of the puzzle.
+
+Puzzles are rectangular, but not necessarily square
+Puzzles have 2 <= r <= 10 rows and 2 <= c <= 10 colums
+Letters are in lower case a-z
+Rows are separated by a hyphen -
+Missing squares are denoted by a space  
+
+Output
+A list of words.
+
+Contains all words in the puzzle
+Sorted by length, then alphabetically
+If there are no words in the puzzle, return an empty list
+
+Words
+All valid words for this kata are preloaded in the list WORDS.
+
+There are 14,460 valid words
+Words are at least 4 letters
+Words are in lower case
