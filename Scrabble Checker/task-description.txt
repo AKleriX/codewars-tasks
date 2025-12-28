@@ -1,0 +1,67 @@
+In this kata we represent the state of a 15 x 15 Scrabble board by a 225-character string. Unoccupied squares are space characters, occupied squares are upper-case letters.
+
+Your task is to check whether the board is valid, according to the rules of the game, and using the preloaded dictionary to validate each word on the board.
+
+Note that to facilitate creation of complex test cases, the preloaded dictionary contains a number of words of the form XX, XXX, XXXX, ... not usually found in a Scrabble dictionary.
+
+Implement the function
+
+def check(board: str) -> bool:
+
+returning True if the board is valid and False otherwise
+
+The rules are:
+
+Words are two or more letters in length
+Words are read from left to right or from top to bottom
+An empty board is valid
+For any non-empty board, there must be a tile covering the centre square
+A board with only one single tile is invalid
+All tiles on the board are connected. i.e.Each tile must be horizontally or vertically adjacent to another tile, and there are no 'islands' of words separated from the centre by empty squares. (Because, in a Scrabble game, each new word added after the first must be adjacent to an existing tile).
+All words on the board, of two or more letters, must be in the supplied dictionary
+Adjacent tiles in a given direction must form a complete word from the supplied dictionary
+
+The preloaded dictionary has type list[str]
+
+dictionary = ["AA", "AE", ...]
+
+In these simple examples only the central region of the board is shown:
+
+Valid:
+
+. C O D E
+T O . I .
+. W A R S
+. . . T .
+
+Valid:
+
+H I
+I S
+
+Invalid (not connected):
+
+C O D E
+. . . .
+W A R S
+
+Invalid (not connected):
+
+C O D E .
+. . . . W
+. . . . A
+. . . . R
+. . . . S
+
+Invalid (DJR is not a word):
+
+C O D E
+. . J .
+W A R S
+
+Invalid (SN is not a word):
+
+C O D E
+O
+W A R S
+S N
