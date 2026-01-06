@@ -1,0 +1,16 @@
+Task
+You have a list arrays of N arrays of positive integers, each of which is sorted in ascending order.
+
+Your task is to return the median value all of the elements of the combined lists.
+
+Example
+arrays =[[1,2,3],[4,5,6],[7,8,9]] In this case the median is 5
+
+arrays =[[1,2,3],[4,5],[100,101,102]] In this case the median is 4.5
+
+Some of the arrays may be empty, but there will always be at least one non-empty array in the list
+
+Tests
+50 Small Tests: 5 arrays, each with up to 20 elements
+50 Medium Tests: 10 arrays, each with up to 1,000 elements
+50 Large Tests: Up to 15 arrays, each with up to 2,000,000 elements
