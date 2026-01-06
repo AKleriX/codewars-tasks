@@ -1,0 +1,16 @@
+
+Background
+Let G be an undirected graph. Suppose we start with three coins on three arbitrarily chosen vertices of G, and we want to move the coins so that they lie on the same vertex using as few moves as possible. At every step, each coin must move across an edge.
+
+Task
+Write a function converge(g, u1, u2, u3)
+
+Input
+Graph G, as a dictionary with vertices as keys and its neighbours in set as values.
+
+Vertices u1, u2, u3, which might not be distinct, at which three coins are initially located
+
+Output
+Return the minimum number of steps possible to converge to any vertex P, or, if no convergence is possible, return None.
+
+Expected time complexity is O(n^2)
