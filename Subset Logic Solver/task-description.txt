@@ -1,0 +1,51 @@
+Problem Description
+This challenge presents a constraint satisfaction puzzle where the goal is to assign unique values to a series of cells. Each cell starts with a set of candidate values representing all possible assignments.
+
+The puzzle requires applying logical deduction to narrow down these candidates, aiming to identify unique values per cell whenever possible. When insufficient information exists for uniqueness, the solution should return a minimal set of candidates consistent with the puzzle constraints.
+
+cells = [{1,2}, {1,2}, {1,2,3}]
+# there are 2 possible solutions
+possible_solutions = [[1,2,3], [2,1,3]]
+# return minimal set of candidates per cell
+return [{1,2}, {1,2}, {3}]
+
+Task
+Implement a function that takes as input a list of sets, where each set contains candidate values for a cell.
+
+For each cell, refine its candidate set so that if a unique value can be determined, the set contains only that value; otherwise, return the smallest possible set of candidates consistent with all constraints.
+Each candidate value must appear in exactly one cell’s set; if it cannot be uniquely assigned, it should remain as a candidate only in the minimal number of cells required by the puzzle constraints.
+
+Input
+cells: List of sets of positive integers of size N, with each set corresponding to candidates for one cell.
+
+Candidates represent potential values that can fill the cell.
+Input data is guaranteed valid and free of contradictions.
+
+Output
+
+List of sets of positive integers, refined from the input, representing those same cells.
+
+Each output set contains either a single unique value or a minimal set of candidates consistent with all puzzle constraints.
+The output collectively represents a logically consistent configuration derived from input deductions.
+
+Test Constraints
+
+1 <= N <= 18
+approximately 2000 random tests
+
+Examples
+
+cells = [{1}, {1,2}, {1,3}]
+# since the first cell has only one candidate '1', it must accept it
+# this candidate is removed from the remaining cells, yielding sole candidates for
+# those remaining cells, respectively '2' and '3'
+return [{1}, {2}, {3}]
+
+cells = [{1,2}, {1,2}, {1,2,3}]
+# since value '3' can only be assigned to the third cell, the cell must accept it
+# all other candidates are removed from that cell
+# we can't make further progress as values '1' and '2' could both be in either 
+# of the remaining cells
+return [{1,2}, {1,2}, {3}]
+
+Good luck, have fun!
