@@ -1,0 +1,5 @@
+Implement something called str_repeat that repeats a string n-times. That something must not be a function.
+
+Thanks wichu for the idea.
+
+Enjoy! :)
