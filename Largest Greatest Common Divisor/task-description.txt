@@ -1,0 +1,11 @@
+You are given positive integers, a and b (a<b).
+
+Find a positive integer k such that gcd(a+k,b+k) is maximized.
+
+If there are multiple values of k that satisfy the condition above, return the smallest one.
+
+Here gcd(x,y) means the greatest common divisor of x and y.
+
+Constraints
+
+1≤a<b≤10^18
