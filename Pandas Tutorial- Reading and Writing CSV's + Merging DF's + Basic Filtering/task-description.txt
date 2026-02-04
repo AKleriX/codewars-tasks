@@ -1,0 +1,239 @@
+
+You have a file directory with structure of:
+
+.
+└── files
+    ├── students.csv
+    └── grades.csv
+
+The columns in students.csv:
+
+Name   | Student_ID 
+-------+------------
+
+The columns in grades.csv:
+
+ID    | Class   | Grade
+------+---------+-------
+The ID column in grades.csv corresponds to the Student_ID column in students.csv.
+
+Task
+Write under the folder files a csv named output.csv in the format below
+
+Student_ID | Class
+-----------+--------
+
+The file should contain all instances of Student_ID and Class where a student that has a Name of student_name received the grade of grade.
+
+Example 1
+Input
+students.csv:
+Name   | Student_ID 
+-------+------------
+Bob    | 32155   
+Ron    | 43226
+
+grades.csv:
+ID    | Class   | Grade
+------+---------+-------
+32155 | English | A
+32155 | History | B
+32155 | Science | B
+43226 | English | C
+43226 | Math    | A
+43226 | Science | A
+43226 | History | B
+
+export_csv_with_name_and_grade('Bob', 'A')
+Output
+
+output.csv:
+Student_ID | Class
+-----------+--------
+32155      | English
+
+file directories after method is called
+
+.
+└── files
+    ├── students.csv
+    ├── grades.csv
+    └── output.csv
+
+Useful Methods
+
+Read The CSVs
+
+Pandas has a method called read_csv, which reads in a csv
+import pandas as pd
+
+
+students_df = pd.read_csv('files/students.csv', index_col=False)
+grades_df   = pd.read_csv('files/grades.csv'  , index_col=False)
+
+for more info and optional arguments refer to https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+
+Rename the columns
+Pandas has a method to rename columns of DataFrames
+
+df = df.rename(
+  columns= {
+    'Original Column Name 1': 'New Column Name 1',
+    'Original Column Name 2': 'New Column Name 2',
+    'Original Column Name 3': 'New Column Name 3'
+    ...
+  }
+)
+
+#Another valid way to accomplish this is to do the below, 
+#this method makes it so you do not have reassign #df
+
+df.rename(
+  columns= {
+    'Original Column Name 1': 'New Column Name 1',
+    'Original Column Name 2': 'New Column Name 2',
+    'Original Column Name 3': 'New Column Name 3'
+    ...
+  },
+  inplace=True
+)
+
+for more info and optional arguments refer to https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html
+
+Merge the DataFrames
+Pandas has a method called merge that lets you merge 2 Pandas DataFrames
+
+df_merged= df1.merge(
+  df2,
+  on= ['Column_Name_1', 'Column_Name_2', 'Column_Name_3', ...],
+  how=, #'left' or 'right' or 'outer' or 'inner' or 'cross' 
+        # the default value is 'inner'
+)
+
+for more info and optional arguments refer to https://pandas.pydata.org/docs/reference/api/pandas.merge.html
+
+Query the Merged DataFrame
+Pandas has multiple ways to filter or query a dataframe
+
+df_queried= df[
+  df['Column_Name_1'] == 1
+]
+# returns a df with only rows with:
+# Column_Name_1 equaling 1
+
+df_queried= df[
+  (  df['Column_Name_1'] == 1)
+  & (df['Column_Name_2'] == 2)
+]
+# returns a df with only rows with:
+# Column_Name_1 equaling 1 
+# and Column_Name_2 equaling 2
+
+df_queried= df[
+  (  df['Column_Name_1'] == 1)
+  | (df['Column_Name_2'] == 2)
+]
+# returns a df with only rows with:
+# Column_Name_1 equaling 1 
+# or Column_Name_2 equaling 2
+
+# It is important to note that you can only do basic operations 
+# if you choose to query this way
+# there is also the df.query(query_str) too with its own syntax
+
+df_queried= df.query('Column_Name_1 == 1 & Column_Name_2 ==2')
+
+# does the same thing as 
+
+df_queried= df[
+  (  df['Column_Name_1'] == 1)
+  & (df['Column_Name_2'] == 2)
+]
+
+# you can also denote outside variables with quyery by doing
+
+name= 'Bob'
+df_queried= df.query('Column_Name_2 ==@name') 
+# returns a df with rows with:
+# Column_Name_2 equaling name which by extension is 'Bob'
+
+# However be weary as you using nonlocal variables will lead to unexpected behavior
+# the below code will fail
+
+def outer():
+    name = 'Bob'
+    def inner():
+        # May raise NameError: name 'name' is not defined
+        return df.query("Name == @name")
+    return inner()
+
+outer()
+
+# also if a column name has a space you can put the column name between `` to tell the query string its referring to a column
+
+# For more advanced querying it is recommended using the apply method
+# on the df that passes in a function as the parameter
+# with axis being set to 1 so it applies the function
+# row by row rather than column by column
+# all that needs to be passed is a pd.Series that has only True or False values
+
+var_1 = 1
+
+def filter_function(row):
+    return row["Column_Name_1"] == "Something" and row["Column_Name_2"] >=  var_1
+
+df[
+  df.apply(
+    filter_function,
+    axis= 1
+  )
+]
+
+for more info and optional arguments refer to https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html
+
+Make a new DataFrame with Certain Selected Columns
+Pandas allows the users to create a new DataFrame that take specific columns from another DataFrame while retaining the data in the specified order
+
+df1 =pd.read_csv('SomeData.csv', index_col=False)
+df2= df1[['Column_Name_1', 'Column_Name_3' , 'Column_Name_6']]
+Dropping Columns
+Pandas allows the user to easily drop columns of a DataFrame
+df = df.drop(columns= {'Column_Name_1', 'Column_Name_2', 'Column_Name_3' ....})
+
+#Another valid way to accomplish this is to do the below, 
+#this method makes it so you do not have reassign #df
+
+df.drop(columns= {'Column_Name_1', 'Column_Name_2', 'Column_Name_3' ....}, inplace=True)
+
+for more info and optional arguments refer to https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
+
+Export the DataFrame
+Pandas allows the user to easily export a DataFrame into many file formats such as xlsx, xml, csv, and even to your clipboard
+
+df.to_csv('csv_file_path', index=False)
+# to export to csv
+
+df.to_excel('excel_file_path', index=False)
+# to export to xlsx or xls or any excel format
+
+df.to_xml('xml_file_path')
+# to export to xml format
+
+df.to_parquet('parquet_file_path', index=False)
+# to export to pqt format
+
+df.to_json('json_file_path', index=False)
+# to export to json format
+
+df.to_html('html_file_path', index=False)
+# to export to html format
+
+df.to_clipboard(index=False)
+# to copy it to your clipboard, you can paste it in excel to see the data
+
+In this problem though we are exporting to a csv
+for more info and optional arguments refer to https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html
+
+Author's note
+It is highly discouraged to use for loops and df.iterrows() for this problem as doing so does not take advantage of builtin optimizations, but you can if you want, but I will be sad :C
+Use / instead of \\ for paths when using pd.read_csv(directory)
