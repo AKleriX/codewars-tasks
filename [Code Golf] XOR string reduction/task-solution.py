@@ -1,0 +1,1 @@
+X=lambda s:s.count("1")&1
