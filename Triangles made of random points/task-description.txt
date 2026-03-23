@@ -1,0 +1,21 @@
+Description
+You get a list that contains points. A "point" is a tuple like (x, y), where x and y are integer coordinates. By connecting three points, you get a triangle. There will be n > 2 points in the list, so you can draw one or more triangles through them.
+
+Your task is to write a program that returns a tuple containing the areas of the largest and smallest triangles, which could be formed by these points.
+
+Example:
+Points (-4, 5), (-4, 0), (2, 3), (6, 0) can formate 4 different triangles with following areas:
+
+https://i.postimg.cc/x1bzqbV0/Triangles.png
+
+The largest area is 25 and the smallest is 5. So the correct return value is (25, 5)
+
+Additional information:
+
+In the returned tuple, the first position should be the largest area, and the second is the smallest.
+Areas should be rounded to tenths.
+You will always get at least 3 points.
+If the points create only one triangle or several with the same areas, the returned tuple shoud look like this: (10, 10)
+Make your program efficient. With 5 points, you can make 60 triangles, but only 10 of them will be different.
+Three points can form a straight line. This doesn't count as a triangle!
+Use Google!
