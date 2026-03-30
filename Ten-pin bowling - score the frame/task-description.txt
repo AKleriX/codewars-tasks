@@ -1,0 +1,61 @@
+
+Hopefully you are familiar with the game of ten-pin bowling! In this kata you will need to calculate the winner of a match between two players.
+
+Scoring a frame
+Each player will play three frames, consisting of ten attempts to knock down ten pins. At each attempt a player can take either one or two rolls, one if they score ten on their first roll, and a second roll if they score less than ten.
+
+At each attempt the total number of pins knocked down is added to the player's score for that frame. Foul balls (denoted by 'F') contribute nothing.
+
+If a player knocks down all ten pins on their first roll - a strike - then the total number of pins knocked down on the next two rolls is added to their score.
+
+If a player knocks down all ten pins after both rolls - a spare - then the total number of pins knocked down on the next roll is added to their score.
+
+If a player scores a strike or a spare on their final attempt then they get to roll either 1 or 2 'fill' balls so that they get the full bonus points!
+Scoring a match
+For each frame player, a player will receive 2 points if they win that frame, and 0 if they lose. Tied frames award 1 point to each player.
+
+Then, after points for all three frames have been totalled for both players, a single bonus point is awarded to the player who knocks down the most pins across all three frames - bonus points for strikes / spares do NOT count, but fill balls (extra rolls awarded for getting a strike / spare on the last attempt) will be included.
+
+The winner will be the player with the most points in total.
+Input
+The (Python translation) input will be a 2-tuple of 3-tuples, representing each of the two player's three frames. Each 3-tuple (i.e. frame) is itself a 10-tuple, repesenting the attempts in that frame. Each 'attempt' will show the score on the first and second rolls, or will show (10, None) for a strike. Remember that 'F' denotes a foul throw here, which scores nothing.
+The final tuple will show the score obtained on the fill ball(s) where applicable.
+
+Output
+Return a dictionary showing the full tree structure of the scoring for the match.
+
+This needs to show a sub-dictionary for each player with a list for the scores on each frame, and a list for their points scored (including the bonus point, which may be 0 for both players).
+
+The dictionary also needs to show a string with the overall winner as per the following rules:
+If player 1's total points exceed player 2's, 'Player 1 won!'
+If player 2's total points exceed player 1's, 'Player 2 won!'
+If both players are tied on points, 'The match is a draw!'
+Please see the examples for exactly how the return value should look.
+
+Example
+Player 1's frames:
+frame1 = (((10, None), (7, 3), (9, 0), (10, None), (0, 8), (8, 2), (0, 6), (10, None), (10, None), (9, 1, 1)))
+frame2 = (((8, 2), (8, 0), (10, None), (6, 1), (7, 3), (0, 10), (0, 6), (9, 1), (10, None), (5, 2)))
+frame3 = (((10, None), (7, 3), (9, 0), (10, None), (0, 8), (8, 2), (0, 6), (10, None), (10, None), (10, 8, 1)))
+
+Player 2's frames:
+
+frameA = (((8, 1), (8, 0), (1, 0), (6, 1), (6, 3), (0, 0), (0, 6), (4, 1), (4, 1), (5, 2)))
+frameB = (((10, None), (10, None), (7, 'F'), (8, 1), (6, 'F'), (3, 7), (9, 'F'), ('F', 9), (10, None), (6, 'F')))
+frameC = (((10, None), (7, 3), (9, 0), (10, None), (0, 8), (8, 2), (0, 6), (10, None), (10, None), (10, 8, 1)))
+
+Player 1's scores for each frame are [150, 120, 167]
+
+Player 2's scores for each frame are [57, 125, 167]
+
+In addition, total pins knocked down by player 1 and player 2 are 284 and 245 respectively, so player 1 wins the bonus point. If both players knock down the same number of pins then nobody gets an additonal bonus point.
+
+Therefore player 1's points are [2, 0, 1, 1], and those of player 2 are [0, 2, 1, 0].
+
+So the function should return the following dictioary:
+
+{'player 1': {'frames': [150, 120, 167],
+              'points': [2, 0, 1, 1]},
+ 'player 2': {'frames': [57, 125, 167],
+              'points': [0, 2, 1, 0]},
+ 'result': 'Player 1 won!'}
