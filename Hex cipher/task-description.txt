@@ -1,0 +1,8 @@
+In order to bamboozle your friends, you decide to encode your communications in hexadecimal, using an ASCII to hexadecimal table. At first, none of them can understand your messages. But quickly enough, one of your cleverer friends uncovers your trick and starts sending messages in hexadecimal himself. To stay one (or shall we say, n) step(s) ahead of your friend, you decide to go one step further : you'll apply the ASCII to hexadecimal conversion more than once.
+
+Your Task
+Implement 2 functions for encoding and decoding text as described above.
+
+There's a preloaded dictionary TEXT2HEX which maps ASCII characters to their corresponding hexadecimal codes, e.g. 'a' maps to '61'.
+
+Happy bamboozlin'!
