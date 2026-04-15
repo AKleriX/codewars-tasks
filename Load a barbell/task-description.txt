@@ -1,0 +1,64 @@
+
+Load a barbell
+Kata overview
+
+Olympic weightlifting is a sport in which athletes compete in lifting a barbell from the ground to overhead, with the aim of successfully lifting the heaviest weights.
+
+The purpose of this kata is to load an Olympic barbell.
+
+Task
+Write a function that returns a string representation of a barbell, given its weight.
+
+Input
+The weight of a barbell in kg (integer).
+
+Weights are always between 25 - 274 kg (both included).
+
+Output
+A string representation of the barbell, in the form ---gcBRRRR--------------------RRRRBcg---.
+
+The barbell is loaded symmetrically, using as little discs as possible.
+
+Barbell details
+A barbell consists of three parts:
+
+Bar
+Discs
+Collars
+
+The bar weighs 20 kg and uses character -. The bar is 40 characters long.
+
+Discs are loaded and secured by collars on the sleeve of the bar. The bar is loaded with the heaviest discs first and then the lighter discs loaded in descending order of weight toward the outer edge of the bar. The following discs are used. Discs are loaded from the 10th character from the outer edge of the bar.
+
+WEIGHT  COLOR   CHAR
+25 kg   red     R
+20 kg   blue    B
+15 kg   yellow  Y
+10 kg   green   G
+5 kg    white   W
+2.5 kg  red     r
+2 kg    blue    b
+1.5 kg  yellow  y
+1 kg    green   g
+0.5 kg  white   w
+
+In order to secure the discs to the bar, each bar must be equipped with two (2) collars. Collars weigh 2.5 kg each. Collars use character c, and are positioned outward of discs of 2.5 kg or more, and inward of discs of 2 kg or less.
+
+Some examples of loaded barbells and their total weight.
+
+WEIGHT  BARBELL
+25 kg   ---------c--------------------c---------
+26 kg   --------wc--------------------cw--------
+34 kg   -------bcr--------------------rcb-------
+35 kg   --------cW--------------------Wc--------
+47 kg   -------gcG--------------------Gcg-------
+58 kg   -------ycY--------------------Ycy-------
+124 kg  -----bcrBR--------------------RBrcb-----
+225 kg  -----cRRRR--------------------RRRRc-----
+267 kg  ---gcBRRRR--------------------RRRRBcg---
+
+Some examples of incorrectly loaded barbells and their total weight.
+
+WEIGHT  BARBELL
+47 kg   --------cB--------------------cb--------  (asymmetric)
+47 kg   ------wwcG--------------------Gcww------  (ww is more discs than g)
