@@ -1,0 +1,18 @@
+For the series
+
+n
+∑k^k
+k=1
+ 
+Find the last ten digits of the n-term of the series (n will be given as the parameter).
+
+If the last ten digits begin with zeros, omit them. For instance, for input n = 10, you should return "405071317" but not "0405071317".
+
+n will always be an integer between 1 and 15000.
+
+Example
+n --> output
+1     "1"
+2     "5"
+3     "32"
+10    "405071317"
